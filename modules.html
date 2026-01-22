@@ -1,1 +1,287 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frost Client - Modules</title>
+    <link rel="icon" type="image/png" href="./Frost-Logo.png">
+    <link href="https://fonts.cdnfonts.com/css/minecraft-ten" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Minecraft Ten', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #0a0a0a;
+            color: #ffffff;
+            line-height: 1.6;
+            overflow-x: hidden;
+            padding: 40px 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            text-align: center;
+            font-size: 3rem;
+            font-weight: 400;
+            margin-bottom: 40px;
+            color: #ffffff;
+        }
+        
+        .search-container {
+            max-width: 600px;
+            margin: 0 auto 60px;
+            position: relative;
+        }
+        
+        .search-icon {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #666;
+            font-size: 1.2rem;
+        }
+        
+        .search-input {
+            width: 100%;
+            padding: 16px 20px 16px 50px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            color: #ffffff;
+            font-family: 'Minecraft Ten', sans-serif;
+            font-size: 1rem;
+            outline: none;
+            transition: all 0.2s;
+        }
+        
+        .search-input:focus {
+            border-color: rgba(0, 180, 255, 0.5);
+            background: rgba(255, 255, 255, 0.08);
+        }
+        
+        .category {
+            margin-bottom: 60px;
+        }
+        
+        .category-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+        
+        .category-icon {
+            font-size: 1.5rem;
+        }
+        
+        .category-title {
+            font-size: 2rem;
+            font-weight: 400;
+            color: #ffffff;
+        }
+        
+        .modules-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 16px;
+        }
+        
+        .module-card {
+            background: rgba(0, 180, 255, 0.05);
+            border: 1px solid rgba(0, 180, 255, 0.2);
+            border-radius: 8px;
+            padding: 16px 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+        
+        .module-card:hover {
+            background: rgba(0, 180, 255, 0.1);
+            border-color: rgba(0, 180, 255, 0.4);
+            transform: translateY(-2px);
+        }
+        
+        .module-icon {
+            font-size: 1.2rem;
+            color: rgb(0, 180, 255);
+        }
+        
+        .module-name {
+            font-size: 1rem;
+            color: #ffffff;
+            font-weight: 400;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .category-title {
+                font-size: 1.5rem;
+            }
+            
+            .modules-grid {
+                grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Module Library</h1>
+        
+        <div class="search-container">
+            <span class="search-icon">🔍</span>
+            <input type="text" class="search-input" placeholder="Search modules...">
+        </div>
+        
+        <div class="category">
+            <div class="category-header">
+                <span class="category-icon">🔥</span>
+                <h2 class="category-title">Combat</h2>
+            </div>
+            <div class="modules-grid">
+                <div class="module-card">
+                    <span class="module-icon">🎯</span>
+                    <span class="module-name">Aim Assist</span>
+                </div>
+                <div class="module-card">
+                    <span class="module-icon">⚓</span>
+                    <span class="module-name">AnchorMacro</span>
+                </div>
+                <div class="module-card">
+                    <span class="module-icon">⚓</span>
+                    <span class="module-name">AnchorMacro v2</span>
+                </div>
+                <div class="module-card">
+                    <span class="module-icon">💎</span>
+                    <span class="module-name">AutoCrystal</span>
+                </div>
+                <div class="module-card">
+                    <span class="module-icon">👊</span>
+                    <span class="module-name">AutoDoubleHand</span>
+                </div>
+                <div class="module-card">
+                    <span class="module-icon">🍖</span>
+                    <span class="module-name">AutoEat</span>
+                </div>
+                <div class="module-card">
+                    <span class="module-icon">🎆</span>
+                    <span class="module-name">AutoFirework</span>
+                </div>
+                <div class="module-card">
+                    <span class="module-icon">⚡</span>
+                    <span class="module-name">AutoJumpReset</span>
+                </div>
+                <div class="module-card">
+                    <span class="module-icon">📜</span>
+                    <span class="module-name">AutoLog</span>
+                </div>
+                <div class="module-card">
+                    <span class="module-icon">🛡️</span>
+                    <span class="module-name">AutoTotem</span>
+                </div>
+                <div class="module-card">
+                    <span class="module-icon">💎</span>
+                    <span class="module-name">Crystal Macro</span>
+                </div>
+                <div class="module-card">
+                    <span class="module-icon">✨</span>
+                    <span class="module-name">Crystal Optimizer</span>
+                </div>
+                <div class="module-card">
+                    <span class="module-icon">⚔️</span>
+                    <span class="module-name">DoubleAnchor</span>
+                </div>
+                <div class="module-card">
+                    <span class="module-icon">👻</span>
+                    <span class="module-name">HoverTotem</span>
+                </div>
+                <div class="module-card">
+                    <span class="module-icon">🛡️</span>
+                    <span class="module-name">InvTotem</span>
+                </div>
+                <div class="module-card">
+                    <span class="module-icon">🔄</span>
+                    <span class="module-name">ItemSwap</span>
+                </div>
+                <div class="module-card">
+                    <span class="module-icon">⚔️</span>
+                    <span class="module-name">MaceSwap</span>
+                </div>
+                <div class="module-card">
+                    <span class="module-icon">🚫</span>
+                    <span class="module-name">NoInteract</span>
+                </div>
+                <div class="module-card">
+                    <span class="module-icon">⭕</span>
+                    <span class="module-name">PearlThrow</span>
+                </div>
+                <div class="module-card">
+                    <span class="module-icon">🔒</span>
+                    <span class="module-name">SafeAnchor</span>
+                </div>
+                <div class="module-card">
+                    <span class="module-icon">🎯</span>
+                    <span class="module-name">TriggerBot</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="category">
+            <div class="category-header">
+                <span class="category-icon">👁️</span>
+                <h2 class="category-title">Visual</h2>
+            </div>
+            <div class="modules-grid">
+                <div class="module-card">
+                    <span class="module-icon">🔄</span>
+                    <span class="module-name">AntiBlockRotate</span>
+                </div>
+                <div class="module-card">
+                    <span class="module-icon">📊</span>
+                    <span class="module-name">BaseESP</span>
+                </div>
+                <div class="module-card">
+                    <span class="module-icon">🧱</span>
+                    <span class="module-name">BlockESP</span>
+                </div>
+                <div class="module-card">
+                    <span class="module-icon">📦</span>
+                    <span class="module-name">ChunkFinder</span>
+                </div>
+                <div class="module-card">
+                    <span class="module-icon">💎</span>
+                    <span class="module-name">CrystalESP</span>
+                </div>
+                <div class="module-card">
+                    <span class="module-icon">➕</span>
+                    <span class="module-name">ExtraESP</span>
+                </div>
+                <div class="module-card">
+                    <span class="module-icon">🌟</span>
+                    <span class="module-name">FullBright</span>
+                </div>
+                <div class="module-card">
+                    <span class="module-icon">⭕</span>
+                    <span class="module-name">HoleESP</span>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>
