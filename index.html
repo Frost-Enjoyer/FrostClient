@@ -130,10 +130,37 @@
             font-weight: 400;
         }
         
+        .license-key-container {
+            margin-bottom: 30px;
+        }
+        
+        .license-key-container p {
+            margin-bottom: 10px;
+            color: #ffffff;
+        }
+        
+        .license-key-input {
+            width: 100%;
+            padding: 12px 16px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(0, 180, 255, 0.3);
+            border-radius: 8px;
+            color: #ffffff;
+            font-family: 'Minecraft Ten', monospace;
+            font-size: 1rem;
+            outline: none;
+            transition: all 0.2s;
+        }
+        
+        .license-key-input:focus {
+            border-color: rgb(0, 180, 255);
+            background: rgba(0, 180, 255, 0.1);
+        }
+        
         .download-primary {
             display: block;
             background: rgb(0, 180, 255);
-            color: #000000;
+            color: #ffffff;
             padding: 16px 24px;
             border-radius: 8px;
             text-decoration: none;
@@ -160,7 +187,7 @@
             display: flex;
             align-items: center;
             gap: 8px;
-            color: rgb(0, 180, 255);
+            color: #ffffff;
             font-size: 0.9rem;
         }
         
@@ -174,6 +201,7 @@
             background: rgba(0, 180, 255, 0.2);
             border-radius: 50%;
             font-size: 0.8rem;
+            color: rgb(0, 180, 255);
         }
         
         .screenshot-container {
@@ -204,8 +232,8 @@
         
         .faq-btn {
             display: inline-block;
-            background: transparent;
-            color: rgb(0, 180, 255);
+            background: rgb(0, 180, 255);
+            color: #ffffff;
             padding: 12px 28px;
             border-radius: 8px;
             text-decoration: none;
@@ -216,7 +244,8 @@
         }
         
         .faq-btn:hover {
-            background: rgba(0, 180, 255, 0.1);
+            background: rgb(0, 160, 235);
+            transform: translateY(-2px);
         }
         
         footer {
@@ -265,17 +294,21 @@
         
         <div class="main-content">
             <div class="left-section">
-                <h2>Unleash the <span class="highlight">half</span> potential</h2>
-                <p>Experience the power that was once behind a paywall - now available to everyone for free.</p>
+                <h2>Download Now</h2>
                 
-                <a href="./Frost-Client.jar" download class="download-primary">⬇ Download Updated Client Jar (18/08/2025)</a>
+                <div class="license-key-container">
+                    <p>License Key</p>
+                    <input type="text" class="license-key-input" placeholder="0000-0000-0000" value="0000-0000-0000">
+                </div>
                 
-                <a href="./Fabric-Api.jar" download class="download-primary">⬇ Download Jar</a>
+                <a href="./Frost-Client.jar" download class="download-primary">Download Frost Client (2026-01-22)</a>
+                
+                <a href="./Fabric-Api.jar" download class="download-primary">Download Fabric API</a>
                 
                 <div class="features">
-                    <div class="feature-badge">Official</div>
+                    <div class="feature-badge">1.21.1</div>
                     <div class="feature-badge">Free</div>
-                    <div class="feature-badge">No Virus</div>
+                    <div class="feature-badge">Safe</div>
                 </div>
             </div>
             
