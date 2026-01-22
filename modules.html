@@ -123,19 +123,15 @@
             color: #ffffff;
             font-weight: 400;
         }
+
+        .hidden {
+            display: none !important;
+        }
         
         @media (max-width: 768px) {
-            h1 {
-                font-size: 2rem;
-            }
-            
-            .category-title {
-                font-size: 1.5rem;
-            }
-            
-            .modules-grid {
-                grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-            }
+            h1 { font-size: 2rem; }
+            .category-title { font-size: 1.5rem; }
+            .modules-grid { grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); }
         }
     </style>
 </head>
@@ -145,7 +141,7 @@
         
         <div class="search-container">
             <span class="search-icon">🔍</span>
-            <input type="text" class="search-input" placeholder="Search modules...">
+            <input type="text" id="moduleSearch" class="search-input" placeholder="Search modules...">
         </div>
         
         <div class="category">
@@ -281,7 +277,34 @@
                 </div>
             </div>
         </div>
-        
     </div>
+
+    <script>
+        document.getElementById('moduleSearch').addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase();
+            const categories = document.querySelectorAll('.category');
+
+            categories.forEach(category => {
+                const modules = category.querySelectorAll('.module-card');
+                let hasVisibleModules = false;
+
+                modules.forEach(module => {
+                    const moduleName = module.querySelector('.module-name').textContent.toLowerCase();
+                    if (moduleName.includes(searchTerm)) {
+                        module.classList.remove('hidden');
+                        hasVisibleModules = true;
+                    } else {
+                        module.classList.add('hidden');
+                    }
+                });
+
+                if (hasVisibleModules) {
+                    category.classList.remove('hidden');
+                } else {
+                    category.classList.add('hidden');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
