@@ -5,8 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Frost Client</title>
     <link rel="icon" type="image/png" href="./Frost-Logo.png">
-    <link href="https://fonts.cdnfonts.com/css/minecraft-ten" rel="stylesheet">
     <style>
+        @font-face {
+            font-family: 'Minecraft Ten';
+            src: url('./font.ttf') format('truetype');
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -14,7 +18,7 @@
         }
         
         body {
-            font-family: 'Minecraft Ten', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-family: 'Minecraft Ten', sans-serif;
             background: #131313;
             color: #ffffff;
             line-height: 1.6;
@@ -154,11 +158,6 @@
             user-select: none;
         }
         
-        .license-key-input:focus {
-            border-color: rgb(0, 180, 255);
-            background: rgba(0, 180, 255, 0.1);
-        }
-        
         .download-primary {
             display: block;
             background: rgb(0, 180, 255);
@@ -258,30 +257,17 @@
             transform: translateY(-2px);
         }
         
-        footer {
-            text-align: center;
-            padding: 40px 20px;
-        }
-        
         @media (max-width: 1024px) {
             .main-content {
                 grid-template-columns: 1fr;
                 gap: 40px;
             }
-            
-            h1 {
-                font-size: 3.5rem;
-            }
-            
-            .left-section h2 {
-                font-size: 2rem;
-            }
+            h1 { font-size: 3.5rem; }
+            .left-section h2 { font-size: 2rem; }
         }
         
         @media (max-width: 768px) {
-            h1 {
-                font-size: 2.5rem;
-            }
+            h1 { font-size: 2.5rem; }
         }
     </style>
 </head>
@@ -292,48 +278,36 @@
                 <img src="./Frost-Logo.png" alt="Logo">
             </div>
         </header>
-        
         <section class="hero">
             <h1>Frost Client</h1>
             <p class="subtitle">The Best Free Client For DonutSMP</p>
             <p class="badge"><span class="free-now-paid-soon">Free Now - Paid Soon</span></p>
-            <a href="https://discord.gg/ZpuVPUEvHb" class="discord-btn">
-                Join The Discord Server
-            </a>
+            <a href="https://discord.gg/ZpuVPUEvHb" class="discord-btn">Join The Discord Server</a>
         </section>
-        
         <div class="main-content">
             <div class="left-section">
                 <h2>Download Now</h2>
-                
                 <div class="license-key-container">
                     <p>License Key</p>
                     <input type="text" class="license-key-input" value="0000-0000-0000" readonly>
                 </div>
-                
                 <a href="./Frost-Client.jar" download class="download-primary">Download Frost Client (2026-01-22)</a>
-                
                 <a href="./Fabric-Api.jar" download class="download-primary">Download Fabric API</a>
-                
                 <div class="features">
                     <div class="feature-badge">1.21.1</div>
                     <div class="feature-badge">Free</div>
                     <div class="feature-badge">Safe</div>
                 </div>
             </div>
-            
             <div class="screenshot-container">
                 <img src="./Frost-Preview.png" alt="Frost Client Interface">
             </div>
         </div>
-        
         <section class="bottom-section">
             <h2>Why Choose Frost Client?</h2>
             <a href="./modules.html" class="faq-btn">View Modules</a>
         </section>
-        
-        <footer>
-        </footer>
+        <footer></footer>
     </div>
 </body>
 </html>
