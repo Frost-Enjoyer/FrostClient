@@ -5,8 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Frost Client</title>
     <link rel="icon" type="image/png" href="./Frost-Logo.png">
-    <link href="https://fonts.cdnfonts.com/css/minecraft-ten" rel="stylesheet">
     <style>
+        @font-face {
+            font-family: 'Minecraft Ten';
+            src: url('./font.ttf') format('truetype');
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -17,7 +21,7 @@
         }
         
         body {
-            font-family: 'Minecraft Ten', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-family: 'Minecraft Ten', sans-serif;
             background: #131313;
             color: #ffffff;
             line-height: 1.6;
@@ -187,9 +191,7 @@
         </div>
         
         <div class="category">
-            <div class="category-header">
-                <h2 class="category-title">Combat</h2>
-            </div>
+            <div class="category-header"><h2 class="category-title">Combat</h2></div>
             <div class="modules-grid">
                 <div class="module-wrapper"><div class="module-card"><span class="module-name">Aim Assist</span></div><div class="module-description">Smoothly aims at nearby entities while holding a key</div></div>
                 <div class="module-wrapper"><div class="module-card"><span class="module-name">Anchor Macro</span></div><div class="module-description">Auto blows up respawn anchors for you</div></div>
@@ -211,77 +213,69 @@
         </div>
 
         <div class="category">
-            <div class="category-header">
-                <h2 class="category-title">Misc</h2>
-            </div>
+            <div class="category-header"><h2 class="category-title">Misc</h2></div>
             <div class="modules-grid">
-                <div class="module-wrapper"><div class="module-card"><span class="module-name">Auto Eat</span></div><div class="module-description">It detects whenever the hungerbar/health falls a certain threshold, selects food in your hotbar, and starts eating</div></div>
-                <div class="module-wrapper"><div class="module-card"><span class="module-name">Auto Firework</span></div><div class="module-description">Switches to a firework and uses it when you press a bind</div></div>
+                <div class="module-wrapper"><div class="module-card"><span class="module-name">Auto Eat</span></div><div class="module-description">Detects hunger/health and eats automatically</div></div>
+                <div class="module-wrapper"><div class="module-card"><span class="module-name">Auto Firework</span></div><div class="module-description">Switches to and uses firework on bind</div></div>
                 <div class="module-wrapper"><div class="module-card"><span class="module-name">Auto Mine</span></div><div class="module-description">Allows you to auto mine</div></div>
                 <div class="module-wrapper"><div class="module-card"><span class="module-name">Auto Tool</span></div><div class="module-description">Auto switches to best tool</div></div>
                 <div class="module-wrapper"><div class="module-card"><span class="module-name">Auto Tpa</span></div><div class="module-description">Helps you teleport streamers</div></div>
-                <div class="module-wrapper"><div class="module-card"><span class="module-name">Cord Snapper</span></div><div class="module-description">Sends base coordinates in a discord webhook</div></div>
-                <div class="module-wrapper"><div class="module-card"><span class="module-name">Fake Lag</span></div><div class="module-description">Holds packets and creates lag for others</div></div>
+                <div class="module-wrapper"><div class="module-card"><span class="module-name">Cord Snapper</span></div><div class="module-description">Sends base coordinates to Discord</div></div>
+                <div class="module-wrapper"><div class="module-card"><span class="module-name">Fake Lag</span></div><div class="module-description">Creates lag for others</div></div>
                 <div class="module-wrapper"><div class="module-card"><span class="module-name">Fast Use</span></div><div class="module-description">Spams use action</div></div>
-                <div class="module-wrapper"><div class="module-card"><span class="module-name">Free Cam</span></div><div class="module-description">Lets you move freely around the world without actually moving</div></div>
+                <div class="module-wrapper"><div class="module-card"><span class="module-name">Free Cam</span></div><div class="module-description">Move camera freely around world</div></div>
                 <div class="module-wrapper"><div class="module-card"><span class="module-name">Full Bright</span></div><div class="module-description">Lights everything up</div></div>
-                <div class="module-wrapper"><div class="module-card"><span class="module-name">Key Pearl</span></div><div class="module-description">Switches to an ender pearl and throws it when you press a bind</div></div>
-                <div class="module-wrapper"><div class="module-card"><span class="module-name">Name Protect</span></div><div class="module-description">Replaces your name with given one</div></div>
-                <div class="module-wrapper"><div class="module-card"><span class="module-name">Player Detect</span></div><div class="module-description">Disconnects when a player is nearby</div></div>
+                <div class="module-wrapper"><div class="module-card"><span class="module-name">Key Pearl</span></div><div class="module-description">Quick pearl throw on bind</div></div>
+                <div class="module-wrapper"><div class="module-card"><span class="module-name">Name Protect</span></div><div class="module-description">Replaces your name</div></div>
+                <div class="module-wrapper"><div class="module-card"><span class="module-name">Player Detect</span></div><div class="module-description">Disconnects when player is near</div></div>
                 <div class="module-wrapper"><div class="module-card"><span class="module-name">Sneak</span></div><div class="module-description">Auto crouches</div></div>
                 <div class="module-wrapper"><div class="module-card"><span class="module-name">Sprint</span></div><div class="module-description">Auto sprints when moving</div></div>
             </div>
         </div>
 
         <div class="category">
-            <div class="category-header">
-                <h2 class="category-title">DonutSMP</h2>
-            </div>
+            <div class="category-header"><h2 class="category-title">DonutSMP</h2></div>
             <div class="modules-grid">
-                <div class="module-wrapper"><div class="module-card"><span class="module-name">AI Base Finder</span></div><div class="module-description">(Beta) Report issues in the discord</div></div>
-                <div class="module-wrapper"><div class="module-card"><span class="module-name">Anti Trap</span></div><div class="module-description">Lets you escape polish traps</div></div>
-                <div class="module-wrapper"><div class="module-card"><span class="module-name">Auction Sniper</span></div><div class="module-description">Snipes items from the auction</div></div>
+                <div class="module-wrapper"><div class="module-card"><span class="module-name">AI Base Finder</span></div><div class="module-description">(Beta) Report issues in discord</div></div>
+                <div class="module-wrapper"><div class="module-card"><span class="module-name">Anti Trap</span></div><div class="module-description">Escape polish traps</div></div>
+                <div class="module-wrapper"><div class="module-card"><span class="module-name">Auction Sniper</span></div><div class="module-description">Snipes auction items</div></div>
                 <div class="module-wrapper"><div class="module-card"><span class="module-name">Auto Base Finder</span></div><div class="module-description">Auto searches for bases</div></div>
                 <div class="module-wrapper"><div class="module-card"><span class="module-name">Auto Sell</span></div><div class="module-description">Auto sells items</div></div>
-                <div class="module-wrapper"><div class="module-card"><span class="module-name">Auto Spawner Sell</span></div><div class="module-description">Auto drops bones from spawner and sells them</div></div>
-                <div class="module-wrapper"><div class="module-card"><span class="module-name">Bone Dropper</span></div><div class="module-description">Auto drops bones from spawner</div></div>
+                <div class="module-wrapper"><div class="module-card"><span class="module-name">Auto Spawner Sell</span></div><div class="module-description">Drops and sells spawner bones</div></div>
+                <div class="module-wrapper"><div class="module-card"><span class="module-name">Bone Dropper</span></div><div class="module-description">Auto drops bones</div></div>
                 <div class="module-wrapper"><div class="module-card"><span class="module-name">Chunk Finder</span></div><div class="module-description">Finds suspicious chunks</div></div>
-                <div class="module-wrapper"><div class="module-card"><span class="module-name">Fake Prefix</span></div><div class="module-description">Shows a fake prefix next to your name</div></div>
-                <div class="module-wrapper"><div class="module-card"><span class="module-name">Fake Stats</span></div><div class="module-description">Fake your stats on the scoreboard</div></div>
+                <div class="module-wrapper"><div class="module-card"><span class="module-name">Fake Prefix</span></div><div class="module-description">Fake prefix next to name</div></div>
+                <div class="module-wrapper"><div class="module-card"><span class="module-name">Fake Stats</span></div><div class="module-description">Fake scoreboard stats</div></div>
                 <div class="module-wrapper"><div class="module-card"><span class="module-name">Netherite Finder</span></div><div class="module-description">Finds ancient debris</div></div>
-                <div class="module-wrapper"><div class="module-card"><span class="module-name">Shulker Dropper</span></div><div class="module-description">Auto goes to shop buys shulkers and drops them</div></div>
-                <div class="module-wrapper"><div class="module-card"><span class="module-name">Spawner Protect</span></div><div class="module-description">Auto protects your spawners if player is nearby</div></div>
-                <div class="module-wrapper"><div class="module-card"><span class="module-name">Tunnel Base Finder</span></div><div class="module-description">Finds bases digging a tunnel</div></div>
+                <div class="module-wrapper"><div class="module-card"><span class="module-name">Shulker Dropper</span></div><div class="module-description">Buys and drops shulkers</div></div>
+                <div class="module-wrapper"><div class="module-card"><span class="module-name">Spawner Protect</span></div><div class="module-description">Protects spawners from players</div></div>
+                <div class="module-wrapper"><div class="module-card"><span class="module-name">Tunnel Base Finder</span></div><div class="module-description">Finds bases via tunnels</div></div>
             </div>
         </div>
 
         <div class="category">
-            <div class="category-header">
-                <h2 class="category-title">Render</h2>
-            </div>
+            <div class="category-header"><h2 class="category-title">Render</h2></div>
             <div class="modules-grid">
-                <div class="module-wrapper"><div class="module-card"><span class="module-name">Block Esp</span></div><div class="module-description">Renders specific blocks through walls</div></div>
-                <div class="module-wrapper"><div class="module-card"><span class="module-name">Hand View</span></div><div class="module-description">Custom main hand animation</div></div>
+                <div class="module-wrapper"><div class="module-card"><span class="module-name">Block Esp</span></div><div class="module-description">Renders blocks through walls</div></div>
+                <div class="module-wrapper"><div class="module-card"><span class="module-name">Hand View</span></div><div class="module-description">Custom hand animation</div></div>
                 <div class="module-wrapper"><div class="module-card"><span class="module-name">Hole Esp</span></div><div class="module-description">Renders holes through walls</div></div>
-                <div class="module-wrapper"><div class="module-card"><span class="module-name">Hud</span></div><div class="module-description">Customizable HUD for client information</div></div>
-                <div class="module-wrapper"><div class="module-card"><span class="module-name">Item Esp</span></div><div class="module-description">Renders specific items through walls</div></div>
-                <div class="module-wrapper"><div class="module-card"><span class="module-name">Light Debug</span></div><div class="module-description">Shows light sources underground</div></div>
+                <div class="module-wrapper"><div class="module-card"><span class="module-name">Hud</span></div><div class="module-description">Customizable client HUD</div></div>
+                <div class="module-wrapper"><div class="module-card"><span class="module-name">Item Esp</span></div><div class="module-description">Renders items through walls</div></div>
+                <div class="module-wrapper"><div class="module-card"><span class="module-name">Light Debug</span></div><div class="module-description">Shows underground light sources</div></div>
                 <div class="module-wrapper"><div class="module-card"><span class="module-name">Player Esp</span></div><div class="module-description">Renders players through walls</div></div>
-                <div class="module-wrapper"><div class="module-card"><span class="module-name">Storage Esp</span></div><div class="module-description">Renders storage blocks through walls</div></div>
-                <div class="module-wrapper"><div class="module-card"><span class="module-name">Suspicious Esp</span></div><div class="module-description">Renders suspicious things through walls</div></div>
-                <div class="module-wrapper"><div class="module-card"><span class="module-name">Swing Speed</span></div><div class="module-description">Changes your hand swing animation speed</div></div>
+                <div class="module-wrapper"><div class="module-card"><span class="module-name">Storage Esp</span></div><div class="module-description">Renders storage through walls</div></div>
+                <div class="module-wrapper"><div class="module-card"><span class="module-name">Suspicious Esp</span></div><div class="module-description">Renders suspicious blocks</div></div>
+                <div class="module-wrapper"><div class="module-card"><span class="module-name">Swing Speed</span></div><div class="module-description">Changes swing speed</div></div>
             </div>
         </div>
 
         <div class="category">
-            <div class="category-header">
-                <h2 class="category-title">Main</h2>
-            </div>
+            <div class="category-header"><h2 class="category-title">Main</h2></div>
             <div class="modules-grid">
-                <div class="module-wrapper"><div class="module-card"><span class="module-name">Discord Presence</span></div><div class="module-description">Shows frost client discord presence</div></div>
-                <div class="module-wrapper"><div class="module-card"><span class="module-name">Frost</span></div><div class="module-description">Settings for the client</div></div>
-                <div class="module-wrapper"><div class="module-card"><span class="module-name">Music Player</span></div><div class="module-description">Listen to music while using frost client</div></div>
-                <div class="module-wrapper"><div class="module-card"><span class="module-name">Skin Changer</span></div><div class="module-description">changes your skin</div></div>
+                <div class="module-wrapper"><div class="module-card"><span class="module-name">Discord Presence</span></div><div class="module-description">Shows client RPC</div></div>
+                <div class="module-wrapper"><div class="module-card"><span class="module-name">Frost</span></div><div class="module-description">Client settings</div></div>
+                <div class="module-wrapper"><div class="module-card"><span class="module-name">Music Player</span></div><div class="module-description">Listen to music in-game</div></div>
+                <div class="module-wrapper"><div class="module-card"><span class="module-name">Skin Changer</span></div><div class="module-description">Changes your skin</div></div>
             </div>
         </div>
     </div>
@@ -289,14 +283,11 @@
     <script>
         const searchInput = document.getElementById('moduleSearch');
         const categories = document.querySelectorAll('.category');
-
         searchInput.addEventListener('input', (e) => {
             const filter = e.target.value.toLowerCase();
-
             categories.forEach(category => {
                 const modules = category.querySelectorAll('.module-wrapper');
                 let hasMatch = false;
-
                 modules.forEach(module => {
                     const name = module.querySelector('.module-name').textContent.toLowerCase();
                     if (name.includes(filter)) {
@@ -306,12 +297,8 @@
                         module.classList.add('hidden');
                     }
                 });
-
-                if (hasMatch) {
-                    category.classList.remove('hidden');
-                } else {
-                    category.classList.add('hidden');
-                }
+                if (hasMatch) { category.classList.remove('hidden'); }
+                else { category.classList.add('hidden'); }
             });
         });
     </script>
